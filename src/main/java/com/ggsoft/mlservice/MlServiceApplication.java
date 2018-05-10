@@ -15,12 +15,11 @@ import org.springframework.context.annotation.Import;
 @Import( {OpenCVConfig.class, WebConfig.class})
 public class MlServiceApplication {
 
-    //    static {
-//        log.info("This is the library path: {}", System.getProperty("java.library.path"));
-//        Library.
-//        System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
-//        log.info("Library loaded");
-//    }
+        static {
+        log.info("This is the library path: {}", System.getProperty("java.library.path"));
+        System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
+        log.info("Library loaded");
+    }
     public static void main(String[] args) {
         log.info("Loading OpenCV native library");
         log.info("This is the library path: {}", System.getProperty("java.library.path"));
